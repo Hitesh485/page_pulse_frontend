@@ -35,6 +35,7 @@ function UrlForm({ setReport, setLoading, setError, loading }) {
 
     return (
         <form onSubmit={handleSubmit} className="space-y-4">
+
             <input
                 type="text"
                 placeholder="Enter website URL (https://example.com)"
@@ -46,17 +47,18 @@ function UrlForm({ setReport, setLoading, setError, loading }) {
             />
 
             <button
-                type="submit"
-                disabled={loading}
-                className={`w-full rounded-lg py-3 text-white font-semibold transition
+    type="submit"
+    disabled={loading}
+    className={`w-full rounded-lg py-3 text-white font-semibold transition
         ${
             loading
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-blue-600 hover:bg-blue-700 active:scale-95"
         }`}
-            >
-                {loading ? "Analyzing..." : "Analyze Website"}
-            </button>
+>
+    {loading ? "Analyzing..." : "Analyze Website"}
+</button>
+
         </form>
     );
 }
